@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# App using FireBase database to perform CRUD action: create, read, update, delete objects
+
+The App is built with React and TypeScript.
+
+I used FireBase functions to communicate with the server:
+    - onSnapshot - get instant server/ collection data;
+    - addDoc - add new object to the DB
+    - setDoc - update object info
+    - deleteDoc - delete object form DB
+
+I chose Firebase for the ease-of-use and swift performance while updating the UI in real-time.
+
+For data handling in my components I used various techniques, mostly for demo purpose :
+    - React state with useState
+    - localStorage with React useState - inside custom hook
+    - React Router to pass data inside URL params to updatePage - using useNavigate and useLocation 
+
+    [
+        in a real more complex App this would probably be best arranged with 1 context, (+ localStorage) and useReducer for setting different state actions on the 3 types of state: add / update / delete object 
+    ]
+
+The App is aimed to allow user perform CRUD operations and be able to see the changes happen by navigating to the main page where all objects are rerendered.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -13,11 +34,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
